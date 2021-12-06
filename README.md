@@ -15,6 +15,12 @@ sudo python3 setup.py install
 python3 wav_aec.py
 ```
 
+## Parameters
+```
+EchoCanceller.create(filter_len, sr, input_channel, ref_channel, mode)
+```
+* mode : 0->common mode, 1-> asr mode
+
 ## Reference
 
 * [speexdsp-python](https://github.com/xiongyihui/speexdsp-python)
