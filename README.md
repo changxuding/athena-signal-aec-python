@@ -4,6 +4,8 @@ Python Wrapper for AEC of Athena Signal
 
 ```
 git clone https://github.com/campus-ding/athena-signal-aec-python.git
+```
+```
 make
 python3 scripts/wav_aec.py
 ```
