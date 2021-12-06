@@ -1,13 +1,17 @@
 # athena-signal-aec-python
-aec module of athena signal for python
-
+Python Wrapper for AEC of Athena Signal
 ## How to Using This Repository
 
-    ```
-    git clone https://github.com/campus-ding/athena-signal-aec-python.git
-    make
-    python3 wav_aec.py
-    ```
+```
+git clone https://github.com/campus-ding/athena-signal-aec-python.git
+make
+python3 scripts/wav_aec.py
+```
+or 
+```
+sudo python3 setup.py install
+python3 wav_aec.py
+```
 
 ## Reference
 
