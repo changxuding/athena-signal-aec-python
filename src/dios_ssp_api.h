@@ -28,7 +28,7 @@ typedef struct {
     int dt_st;
 }objDios_ssp;
 
-objDios_ssp* dios_ssp_init_api(int frame_size, int nb_mic, int nb_speakers);
+objDios_ssp* dios_ssp_init_api(int frame_size, int nb_mic, int nb_speakers, int mode);
 	
 int dios_ssp_reset_api(void* ptr);
 

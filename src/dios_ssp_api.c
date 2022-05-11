@@ -26,7 +26,7 @@ de-reverberation will be added soon. We are working on them!
 
 #include "dios_ssp_api.h"
 
-objDios_ssp* dios_ssp_init_api(int frame_size, int nb_mic, int nb_speakers)
+objDios_ssp* dios_ssp_init_api(int frame_size, int nb_mic, int nb_speakers, int mode)
 {
     int i;
 	void* ptr = NULL;
@@ -40,7 +40,8 @@ objDios_ssp* dios_ssp_init_api(int frame_size, int nb_mic, int nb_speakers)
 
     // init aec module
     srv->ptr_aec = dios_ssp_aec_init_api(srv->cfg_mic_num, srv->cfg_ref_num, srv->cfg_frame_len);
-    // dios_ssp_aec_config_api(srv->ptr_aec, 0);  // 0: communication mode; 1: asr mode
+    
+    if (mode==0) dios_ssp_aec_config_api(srv->ptr_aec, 0);  // 0: communication mode; 1: asr mode
     // allocate memory
     srv->ptr_mic_buf = (float*)calloc(srv->cfg_mic_num * srv->cfg_frame_len, sizeof(float));
     srv->ptr_ref_buf = (float*)calloc(srv->cfg_ref_num * srv->cfg_frame_len, sizeof(float));
